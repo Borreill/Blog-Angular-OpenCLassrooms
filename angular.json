@@ -50,6 +50,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -145,6 +146,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "blog-angular-oc"
+    }
+  },
+  "defaultProject": "blog-angular-oc",
+  "cli": {
+    "analytics": "1926f62d-fc35-42c7-a232-a6f10065d47c"
+  }
 }
