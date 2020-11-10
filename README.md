@@ -1,28 +1,32 @@
-# BlogAngularOc
+# Angular Blog - OpenClassRooms 
+This is a single page application for blog. This project was generated with Angular CLI version 10.2.0
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
+# Instructions (fr)
+Vous allez créer une application simple de type blog. Cette application va afficher les posts du blog, et chaque post aura un bouton permettant de "love it" ou de "don't love it". Chaque post aura la forme suivante :
 
-## Development server
+post: {
+  title: string,
+  content: string,
+  loveIts: number,
+  created_at: Date
+} 
+Quand un post a plus de "love it" que de "don't love it" (loveIts > 0), il sera coloré en vert, et inversement quand loveIts < 0, il sera coloré en rouge.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Information : je vous conseille d'utiliser Bootstrap pour cet exercice. Si vous créez des list-group-item dans un list-group, vous avez les classes list-group-item-success et list-group-item-danger pour colorer les item.
 
-## Code scaffolding
+En termes de structure :
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+votre AppComponent contiendra l'array des posts, et il le passera à un component PostListComponent
+votre PostListComponent affichera un PostListItemComponent pour chaque post dans l'array qu'il a reçu
+chaque PostListItemComponent affichera le titre, le contenu et la date de création du post dans le template
+les PostListItemComponent auront des boutons qui permettent d'augmenter et de diminuer le nombre de loveIts — cette modification aura uniquement un effet sur le component, et n'a pas besoin d'être remontée au component parent
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Development server / Installation
 
-## Running unit tests
+git clone https://github.com/Borreill/Blog-Angular-OpenCLassrooms.git
+cd angular-material-blog
+npm install
+ng serve
+Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# Blog-Angular-OpenCLassrooms
